@@ -1,11 +1,21 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
+        "checkJs": true,
         "paths": {
-            "@/*": ["../*"],
-            "@/components/*": ["components/*"],
-            "@/css/*": ["css/*"]
+            "@/*": [
+                "../*"
+            ],
+            "@/components/*": [
+                "components/*"
+            ],
+            "@/css/*": [
+                "css/*"
+            ]
         }
     },
-    "exclude": ["node_modules", "out"]
+    "exclude": [
+        "node_modules",
+        "out"
+    ]
 }

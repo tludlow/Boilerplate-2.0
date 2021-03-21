@@ -15,7 +15,7 @@ export default function Layout({ title, contained, children }: LayoutProps) {
             </Head>
             <Navbar />
 
-            <main className="flex-1 overflow-auto bg-gray-50">
+            <main className="flex-1 mt-2 overflow-auto bg-gray-50">
                 <div className={`${contained ? 'container mx-auto px-3 md:px-1 lg:px-0' : ''}`}>{children}</div>
             </main>
         </div>

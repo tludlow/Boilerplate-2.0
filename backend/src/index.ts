@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 
 //Mount routes to the api
 app.get('/ping', apiController.Ping)
+app.get('/test', apiController.Restaurants)
 
 //Catch all 404
 app.get('/*', apiController.FourOFour)

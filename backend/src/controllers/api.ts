@@ -11,6 +11,16 @@ export const Ping = (req: Request, res: Response) => {
     })
 }
 
+export const Restaurants = (req: Request, res: Response) => {
+    res.status(200).send({
+        restaurants: [
+            { name: 'McDonalds', distance: 12 },
+            { name: 'Burger King', distance: 4 },
+            { name: 'KFC', distance: 20 },
+        ],
+    })
+}
+
 /**
  * 404 Route
  * @route GET/*
