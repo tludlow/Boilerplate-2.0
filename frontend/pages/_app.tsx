@@ -1,29 +1,9 @@
 import '@/css/styles.css'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import create from 'zustand'
-import { persist } from 'zustand/middleware'
+
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
-
-type State = {
-    counter: number
-    increase: () => void
-    reset: () => void
-}
-
-export const useStore = create<State>(
-    persist(
-        (set) => ({
-            counter: 0,
-            increase: () => set((state) => ({ counter: state.counter + 1 })),
-            reset: () => set((state) => ({ counter: 0 })),
-        }),
-        {
-            name: 'placeholder-name',
-        }
-    )
-)
 
 const queryClient = new QueryClient()
 export default function App({ Component, pageProps }: AppProps) {

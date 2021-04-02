@@ -1,11 +1,8 @@
 import Layout from '@/components/Layout'
-import { useStore } from './_app'
 import { useQuery } from 'react-query'
 import axios from 'axios'
 
 export default function Index() {
-    const counter = useStore((state) => state.counter)
-
     const fetchData = async () => {
         const response = await axios.get(`http://localhost:5000/test`)
         return response.data
@@ -15,7 +12,7 @@ export default function Index() {
 
     return (
         <Layout title="Index" contained>
-            Counter: {counter}
+            <p className="text-[#42f5ec]">This is a very custom situation right now</p>
             <div className="mt-12">
                 {isLoading ? (
                     <span>Loading...</span>
